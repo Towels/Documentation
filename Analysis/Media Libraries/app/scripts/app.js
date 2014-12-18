@@ -28,17 +28,9 @@ angular
         templateUrl: 'views/image.html',
         controller: 'ImageCtrl'
       })
-      .when('/generic', {
-        templateUrl: 'views/generic.html',
-        controller: 'GenericCtrl'
-      })
       .when('/pdf', {
         templateUrl: 'views/pdf.html',
         controller: 'PDFCtrl'
-      })
-      .when('/presentation', {
-        templateUrl: 'views/presentation.html',
-        controller: 'PresentationCtrl'
       })
       .otherwise({
         redirectTo: '/'
