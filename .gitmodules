@@ -1,0 +1,3 @@
+[submodule "pdfjs"]
+	path = Analysis/Media Libraries/app/lib/pdf.js
+	url = gh:mozilla/pdf.js
