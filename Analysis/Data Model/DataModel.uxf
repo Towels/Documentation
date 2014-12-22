@@ -4,45 +4,255 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>500</x>
-      <y>480</y>
-      <w>150</w>
-      <h>80</h>
+      <x>250</x>
+      <y>10</y>
+      <w>220</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>User
+--
+id: int
+name: String
+email: String
+dateCreated: DateTime
+password: String
+pwLastChanged: DateTime
+emailLastChanged: DateTime
+emailVerified: bool
+active: bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>10</y>
+      <w>200</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>LectureRoom
+--
+id: int
+course: String
+university: String
+prof: String
+dateCreated: DateTime
+dateLastModified: DateTime
+active: bool
+rights: Bitmap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>0</y>
+      <w>460</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=n
+Owner/Lecturer</panel_attributes>
+    <additional_attributes>10.0;20.0;440.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>90</y>
+      <w>460</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=n
+m2=n
+Moderator</panel_attributes>
+    <additional_attributes>10.0;20.0;440.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>160</y>
+      <w>460</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=n
+m2=n
+Viewer</panel_attributes>
+    <additional_attributes>10.0;20.0;440.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>450</y>
+      <w>830</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>180</y>
+      <w>70</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=n
+Owner</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>970</x>
+      <y>200</y>
+      <w>90</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=n
+m2=n
+Reference</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1310</x>
+      <y>10</y>
+      <w>200</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>ContentGraph
+--
+
+Currently unkown Data 
+typesand amount of 
+information.
+
+Possibly stored as JSON
+inside of String in DB?
+
+Lack of information.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1090</x>
+      <y>80</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+Include</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1300</x>
+      <y>510</y>
+      <w>200</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Comment
+--
+id: int
+author: int
+title: String
+content: String
+isRating: bool
+rating: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1390</x>
+      <y>200</y>
+      <w>80</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=n
+Include</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1060</x>
+      <y>610</y>
+      <w>260</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=n
+Include</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>490</y>
+      <w>210</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>/File/
 --
-int/String id/uuid
-String name
-String desc</panel_attributes>
+id: int
+title: String
+desc: String
+dateCreated: DateTime
+dateLastChanged: DateTime</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>320</x>
-      <y>660</y>
-      <w>100</w>
-      <h>30</h>
+      <y>640</y>
+      <w>150</w>
+      <h>80</h>
     </coordinates>
-    <panel_attributes>TextFile</panel_attributes>
+    <panel_attributes>EditableFile
+--
+url: String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>490</x>
-      <y>660</y>
-      <w>160</w>
-      <h>30</h>
+      <x>860</x>
+      <y>640</y>
+      <w>120</w>
+      <h>60</h>
     </coordinates>
-    <panel_attributes>/Content/</panel_attributes>
+    <panel_attributes>/StaticFile/
+--
+url: String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
-      <y>660</y>
+      <x>830</x>
+      <y>770</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -52,7 +262,7 @@ String desc</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>580</x>
+      <x>950</x>
       <y>770</y>
       <w>100</w>
       <h>30</h>
@@ -61,327 +271,83 @@ String desc</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>650</y>
+      <w>420</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+m1=require
+</panel_attributes>
+    <additional_attributes>20.0;20.0;400.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>590</y>
+      <w>220</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;200.0;60.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>590</y>
+      <w>230</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;210.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>690</y>
+      <w>70</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;50.0;40.0;10.0;40.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>690</y>
+      <w>110</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;90.0;40.0;90.0;80.0</additional_attributes>
+  </element>
+  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>450</x>
+      <x>710</x>
       <y>770</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>Presentation</panel_attributes>
+    <panel_attributes>HTML
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>600</y>
-      <w>30</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>760</x>
-      <y>600</y>
-      <w>30</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>560</x>
-      <y>600</y>
-      <w>30</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>360</x>
-      <y>590</y>
-      <w>430</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>410.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>240</x>
-      <y>720</y>
-      <w>140</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>Use display rules based on format,
-eg for Markup Languages
-bg=yellow</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>730</x>
-      <y>710</y>
-      <w>140</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>File format not important. Maybe unify on storage.
-bg=yellow</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>500</x>
-      <y>830</y>
-      <w>140</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>Other files that bundle text with images, like PDF, PPT etc.
-bg=yellow</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>560</x>
-      <y>680</y>
-      <w>30</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>620</x>
-      <y>730</y>
-      <w>30</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>500</x>
-      <y>720</y>
-      <w>150</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>500</x>
-      <y>730</y>
-      <w>30</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>190</x>
-      <y>450</y>
-      <w>990</w>
-      <h>460</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>860</x>
-      <y>150</y>
+      <x>750</x>
+      <y>690</y>
       <w>190</w>
-      <h>50</h>
+      <h>100</h>
     </coordinates>
-    <panel_attributes>Graph
---
-Metadata</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1030</x>
-      <y>210</y>
-      <w>170</w>
-      <h>260</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1..n
-gets referenced by v</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>890</x>
-      <y>60</y>
-      <w>140</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>Currently unknown format.
-Possibly JSON/XML?
-bg=yellow</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>840</x>
-      <y>40</y>
-      <w>240</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>850</x>
-      <y>210</y>
-      <w>170</w>
-      <h>260</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=0..n
-m2=1
-gets referenced by ^</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>230</x>
-      <y>100</y>
-      <w>210</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>User
---
-ID id
-String nickname
-String name
-String surname
-Role role
-String email</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>200</x>
-      <y>0</y>
-      <w>190</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>Please note that the role of ADMIN was intentionally left out.
-This needs further discussion.
-bg=red
-fg=white</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>920</x>
-      <y>590</y>
-      <w>210</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes>Storage of files either completely in DB or in file system and referenced in DB
-Maybe only store files from web editor in DB and reference other files by ID or sth.
-bg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>560</x>
-      <y>550</y>
-      <w>30</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>430</x>
-      <y>100</y>
-      <w>430</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=0..n
-m2=1
-creates &gt;</panel_attributes>
-    <additional_attributes>410.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>430</x>
-      <y>160</y>
-      <w>430</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1
-belongs &lt;</panel_attributes>
-    <additional_attributes>410.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>230</x>
-      <y>220</y>
-      <w>100</w>
-      <h>250</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1
-belongs ^</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>410</x>
-      <y>220</y>
-      <w>150</w>
-      <h>250</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=0..n
-creates/uploads v</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;170.0;40.0;10.0;40.0;10.0;80.0</additional_attributes>
   </element>
 </diagram>
