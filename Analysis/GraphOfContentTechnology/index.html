@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A simple graph</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+    }
+    #container {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <script src="./sigma.min.js"></script>
+  <script>
+    // First initialize sigma:
+    var s = new sigma('container');
+
+    // Add some data to display:
+    s.graph.addNode({
+      // Main attributes:
+      id: 'n0',
+      label: 'Tutorial1',
+      // Display attributes:
+      x: 0.5,
+      y: 0.5,
+      size: 8,
+      color: '#f00'
+    }).addNode({
+      // Main attributes:
+      id: 'n1',
+      label: 'Excercice',
+      // Display attributes:
+      x: 0.5,
+      y: 0.25,
+      size: 3,
+      color: '#00f'
+    }).addNode({
+	 // Main attributes:
+	 id: 'n2',
+	 label: 'watch.pdf',
+	 // Display attributes:
+	 x: 0.25,
+	 y: 0.25,
+	 size: 3,
+	 color: '#00f'
+    }).addNode({
+	 // Main attributes:
+	 id: 'n3',
+	 label: 'e-tutorial',
+	 // Display attributes:
+	 x: 0.75,
+	 y: 0.25,
+	 size: 3,
+	 color: '#0ff'
+    }).addEdge({
+      id: 'e0',
+      // Reference extremities:
+      source: 'n0',
+      target: 'n1'
+    }).addEdge({
+	id: 'e1',
+
+	source: 'n0',
+	target: 'n2'
+    }).addEdge({
+      id: 'e2',
+      // Reference extremities:
+      source: 'n0',
+      target: 'n3'
+    });
+
+    s.bind('overNode outNode clickNode doubleClickNode rightClickNode', function(e) {
+      console.log(e.type, e.data.node.label, e.data.captor);
+    });
+
+    // Finally, let's ask our sigma instance to refresh:
+    s.refresh();
+  </script>
+</body>
+</html>
